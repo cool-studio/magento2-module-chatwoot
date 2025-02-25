@@ -1,0 +1,57 @@
+<?php
+/**
+ * ChatWoot integration template
+ *
+ * @var \CoolStudio\ChatWoot\Block\ChatWoot $block
+ */
+
+// Only render if enabled and token is set
+if (!$block->isEnabled() || !$block->getWebsiteToken()) {
+    return;
+}
+
+$baseUrl = $block->getBaseUrl();
+$websiteToken = $block->getWebsiteToken();
+$position = $block->getPosition();
+$widgetType = $block->getWidgetType();
+$launcherTitle = $block->getLauncherTitle();
+$customerData = $block->getCustomerDataJson();
+?>
+
+<script>
+    // ChatWoot settings
+    window.chatwootSettings = {
+        <?php if ($position): ?>position: "<?= $block->escapeJs($position) ?>",<?php endif; ?>
+        <?php if ($widgetType): ?>type: "<?= $block->escapeJs($widgetType) ?>",<?php endif; ?>
+        <?php if ($launcherTitle): ?>launcherTitle: "<?= $block->escapeJs($launcherTitle) ?>",<?php endif; ?>
+        hideMessageBubble: false
+    };
+
+    (function(d,t) {
+        var BASE_URL = "<?= $block->escapeJs($baseUrl) ?>";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.defer = true;
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+            window.chatwootSDK.run({
+                websiteToken: "<?= $block->escapeJs($websiteToken) ?>",
+                baseUrl: BASE_URL
+            });
+            
+            // Set user if logged in
+            var customerData = <?= /* @noEscape */ $customerData ?>;
+            if (customerData.email) {
+                window.$chatwoot.setUser(
+                    customerData.identifier,
+                    {
+                        name: customerData.name,
+                        email: customerData.email
+                    },
+                    customerData.hmacSignature
+                );
+            }
+        }
+    })(document, "script");
+</script> 

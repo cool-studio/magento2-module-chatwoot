@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <chatwoot>
+            <general>
+                <enabled>0</enabled>
+                <base_url>https://app.chatwoot.com</base_url>
+                <position>right</position>
+                <widget_type>standard</widget_type>
+                <launcher_title>Chat with us</launcher_title>
+            </general>
+        </chatwoot>
+    </default>
+</config> 

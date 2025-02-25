@@ -1,0 +1,47 @@
+{
+    "name": "coolstudio/module-chatwoot",
+    "description": "ChatWoot integration for Magento",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "homepage": "https://github.com/coolstudio/magento2-module-chatwoot",
+    "keywords": [
+        "magento",
+        "magento2 extension",
+        "magento 2 extension",
+        "extension",
+        "module",
+        "magento2 module",
+        "magento 2 module",
+        "magento2",
+        "chatwoot",
+        "chat",
+        "customer support",
+        "live chat",
+        "widget",
+        "support"
+    ],
+    "authors": [
+        {
+            "name": "Jamie Wood",
+            "email": "jamie@cool.studio",
+            "homepage": "https://cool.studio",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "~7.3.0||~7.4.0||~8.1.0",
+        "magento/framework": "103.0.*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "CoolStudio\\ChatWoot\\": ""
+        }
+    }
+} 
