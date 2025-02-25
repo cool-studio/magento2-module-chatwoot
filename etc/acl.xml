@@ -6,7 +6,7 @@
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="CoolStudio_ChatWoot::config" title="ChatWoot Configuration" />
+                            <resource id="CoolStudio_Chatwoot::config" title="Chatwoot Configuration" />
                         </resource>
                     </resource>
                 </resource>

@@ -1,6 +1,6 @@
 {
     "name": "coolstudio/module-chatwoot",
-    "description": "ChatWoot integration for Magento",
+    "description": "Chatwoot integration for Magento",
     "type": "magento2-module",
     "version": "1.0.0",
     "license": [
@@ -41,7 +41,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "CoolStudio\\ChatWoot\\": ""
+            "CoolStudio\\Chatwoot\\": ""
         }
     }
 } 

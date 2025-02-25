@@ -1,8 +1,8 @@
 <?php
 /**
- * ChatWoot integration template
+ * Chatwoot integration template
  *
- * @var \CoolStudio\ChatWoot\Block\ChatWoot $block
+ * @var \CoolStudio\Chatwoot\Block\Chatwoot $block
  */
 
 // Only render if enabled and token is set
@@ -19,7 +19,7 @@ $customerData = $block->getCustomerDataJson();
 ?>
 
 <script>
-    // ChatWoot settings
+    // Chatwoot settings
     window.chatwootSettings = {
         <?php if ($position): ?>position: "<?= $block->escapeJs($position) ?>",<?php endif; ?>
         <?php if ($widgetType): ?>type: "<?= $block->escapeJs($widgetType) ?>",<?php endif; ?>

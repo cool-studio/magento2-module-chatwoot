@@ -1,18 +1,18 @@
 <?php
 /**
- * ChatWoot integration for Magento
+ * Chatwoot integration for Magento
  *
- * @package CoolStudio_ChatWoot
+ * @package CoolStudio_Chatwoot
  */
 
-namespace CoolStudio\ChatWoot\Block;
+namespace CoolStudio\Chatwoot\Block;
 
 use Magento\Framework\View\Element\Template;
 use Magento\Framework\View\Element\Template\Context;
-use CoolStudio\ChatWoot\Helper\Data;
+use CoolStudio\Chatwoot\Helper\Data;
 use Magento\Framework\Serialize\Serializer\Json;
 
-class ChatWoot extends Template
+class Chatwoot extends Template
 {
     /**
      * @var Data
@@ -42,7 +42,7 @@ class ChatWoot extends Template
     }
 
     /**
-     * Check if ChatWoot is enabled
+     * Check if Chatwoot is enabled
      *
      * @return bool
      */
@@ -112,7 +112,7 @@ class ChatWoot extends Template
     }
 
     /**
-     * Get customer data with HMAC signature for ChatWoot
+     * Get customer data with HMAC signature for Chatwoot
      *
      * @return array
      */

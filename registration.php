@@ -1,14 +1,14 @@
 <?php
 /**
- * ChatWoot integration for Magento
+ * Chatwoot integration for Magento
  *
- * @package CoolStudio_ChatWoot
+ * @package CoolStudio_Chatwoot
  */
 
 use Magento\Framework\Component\ComponentRegistrar;
 
 ComponentRegistrar::register(
     ComponentRegistrar::MODULE,
-    'CoolStudio_ChatWoot',
+    'CoolStudio_Chatwoot',
     __DIR__
 ); 

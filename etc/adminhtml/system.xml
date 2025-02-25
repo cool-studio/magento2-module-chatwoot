@@ -3,25 +3,25 @@
     <system>
         <section id="chatwoot" translate="label" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
             <class>separator-top</class>
-            <label>ChatWoot</label>
+            <label>Chatwoot</label>
             <tab>service</tab>
-            <resource>CoolStudio_ChatWoot::config</resource>
+            <resource>CoolStudio_Chatwoot::config</resource>
             <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General Configuration</label>
                 <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Enable ChatWoot</label>
+                    <label>Enable Chatwoot</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
                 <field id="website_token" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Website Token</label>
-                    <comment>Enter your ChatWoot website token</comment>
+                    <comment>Enter your Chatwoot website token</comment>
                     <depends>
                         <field id="enabled">1</field>
                     </depends>
                 </field>
                 <field id="base_url" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Base URL</label>
-                    <comment>Enter your ChatWoot base URL (e.g., https://app.chatwoot.com)</comment>
+                    <comment>Enter your Chatwoot base URL (e.g., https://app.chatwoot.com)</comment>
                     <depends>
                         <field id="enabled">1</field>
                     </depends>
@@ -29,14 +29,14 @@
                 <field id="hmac_secret" translate="label" type="obscure" sortOrder="35" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>HMAC Secret Key</label>
                     <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
-                    <comment>For secure user identification. Get this from your ChatWoot settings.</comment>
+                    <comment>For secure user identification. Get this from your Chatwoot settings.</comment>
                     <depends>
                         <field id="enabled">1</field>
                     </depends>
                 </field>
                 <field id="position" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Widget Position</label>
-                    <source_model>CoolStudio\ChatWoot\Model\Config\Source\Position</source_model>
+                    <source_model>CoolStudio\Chatwoot\Model\Config\Source\Position</source_model>
                     <comment>Position of the widget on the screen</comment>
                     <depends>
                         <field id="enabled">1</field>
@@ -44,7 +44,7 @@
                 </field>
                 <field id="widget_type" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Widget Type</label>
-                    <source_model>CoolStudio\ChatWoot\Model\Config\Source\WidgetType</source_model>
+                    <source_model>CoolStudio\Chatwoot\Model\Config\Source\WidgetType</source_model>
                     <comment>Standard or Expanded widget display</comment>
                     <depends>
                         <field id="enabled">1</field>

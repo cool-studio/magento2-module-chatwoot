@@ -1,11 +1,11 @@
 <?php
 /**
- * ChatWoot integration for Magento
+ * Chatwoot integration for Magento
  *
- * @package CoolStudio_ChatWoot
+ * @package CoolStudio_Chatwoot
  */
 
-namespace CoolStudio\ChatWoot\Helper;
+namespace CoolStudio\Chatwoot\Helper;
 
 use Magento\Framework\App\Helper\AbstractHelper;
 use Magento\Framework\App\Helper\Context;
@@ -163,7 +163,7 @@ class Data extends AbstractHelper
     }
 
     /**
-     * Get customer data for ChatWoot
+     * Get customer data for Chatwoot
      *
      * @return array
      */

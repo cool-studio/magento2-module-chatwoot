@@ -1,12 +1,12 @@
-# ChatWoot for Magento 2
+# Chatwoot for Magento 2
 
-![ChatWoot for Magento 2](https://img.shields.io/badge/Magento-2.4.x-orange.svg) ![License](https://img.shields.io/badge/license-OSL--3.0-blue.svg)
+![Chatwoot for Magento 2](https://img.shields.io/badge/Magento-2.4.x-orange.svg) ![License](https://img.shields.io/badge/license-OSL--3.0-blue.svg)
 
-This module integrates the ChatWoot customer messaging platform with Magento 2, allowing you to provide seamless customer support directly on your store.
+This module integrates the Chatwoot customer messaging platform with Magento 2, allowing you to provide seamless customer support directly on your store.
 
 ## Features
 
-- ✅ Easy integration with ChatWoot
+- ✅ Easy integration with Chatwoot
 - ✅ Secure user identification with HMAC validation
 - ✅ Customizable widget position (left/right)
 - ✅ Multiple widget display types (standard/expanded)
@@ -30,14 +30,14 @@ bin/magento cache:flush
 
 1. Create the following directory structure in your Magento installation:
    ```
-   app/code/CoolStudio/ChatWoot
+   app/code/CoolStudio/Chatwoot
    ```
 
 2. Download the module files and place them in this directory
    
 3. Enable the module and update the database:
    ```bash
-   bin/magento module:enable CoolStudio_ChatWoot
+   bin/magento module:enable CoolStudio_Chatwoot
    bin/magento setup:upgrade
    bin/magento setup:di:compile
    bin/magento setup:static-content:deploy -f
@@ -47,14 +47,14 @@ bin/magento cache:flush
 ## Configuration
 
 1. Log in to your Magento Admin Panel
-2. Navigate to **Stores** > **Configuration** > **Services** > **ChatWoot**
+2. Navigate to **Stores** > **Configuration** > **Services** > **Chatwoot**
 3. Configure the following settings:
 
 | Setting | Description |
 |---------|-------------|
-| Enable ChatWoot | Enables/disables the module |
-| Website Token | Your ChatWoot website token (found in ChatWoot dashboard) |
-| Base URL | Your ChatWoot instance URL (e.g., https://app.chatwoot.com) |
+| Enable Chatwoot | Enables/disables the module |
+| Website Token | Your Chatwoot website token (found in Chatwoot dashboard) |
+| Base URL | Your Chatwoot instance URL (e.g., https://app.chatwoot.com) |
 | HMAC Secret Key | Secret key for secure user identification (optional) |
 | Widget Position | Position of the widget (left/right) |
 | Widget Type | Standard or Expanded bubble display |
@@ -64,7 +64,7 @@ bin/magento cache:flush
 
 For enhanced security, you can enable HMAC validation:
 
-1. In your ChatWoot dashboard, go to **Settings** > **Inboxes** > **Select your inbox** > **Widget Settings**
+1. In your Chatwoot dashboard, go to **Settings** > **Inboxes** > **Select your inbox** > **Widget Settings**
 2. Enable "Identity Validation" to get your secret key
 3. Copy this key to the Magento admin configuration
 

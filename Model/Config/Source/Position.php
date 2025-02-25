@@ -1,11 +1,11 @@
 <?php
 /**
- * ChatWoot integration for Magento
+ * Chatwoot integration for Magento
  *
- * @package CoolStudio_ChatWoot
+ * @package CoolStudio_Chatwoot
  */
 
-namespace CoolStudio\ChatWoot\Model\Config\Source;
+namespace CoolStudio\Chatwoot\Model\Config\Source;
 
 use Magento\Framework\Data\OptionSourceInterface;
 
