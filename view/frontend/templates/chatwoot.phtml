@@ -54,6 +54,9 @@ $customerData = $block->getCustomerDataJson();
                     customerData.hmacSignature
                 );
             }
+            
+            // Always set custom attributes for all users
+            window.$chatwoot.setCustomAttributes(customerData.custom_attributes);
         }
     })(document, "script");
 </script> 

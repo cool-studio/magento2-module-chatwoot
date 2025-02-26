@@ -12,6 +12,7 @@ use Magento\Framework\App\Helper\Context;
 use Magento\Store\Model\ScopeInterface;
 use Magento\Customer\Model\Session as CustomerSession;
 use Magento\Framework\Encryption\EncryptorInterface;
+use Magento\Framework\UrlInterface;
 
 class Data extends AbstractHelper
 {
@@ -38,6 +39,11 @@ class Data extends AbstractHelper
     protected $encryptor;
 
     /**
+     * @var UrlInterface
+     */
+    protected $urlBuilder;
+
+    /**
      * @param Context $context
      * @param CustomerSession $customerSession
      * @param EncryptorInterface $encryptor
@@ -49,6 +55,7 @@ class Data extends AbstractHelper
     ) {
         $this->customerSession = $customerSession;
         $this->encryptor = $encryptor;
+        $this->urlBuilder = $context->getUrlBuilder();
         parent::__construct($context);
     }
 
@@ -179,20 +186,35 @@ class Data extends AbstractHelper
     }
 
     /**
+     * Get current page URL
+     *
+     * @return string
+     */
+    public function getCurrentUrl()
+    {
+        return $this->urlBuilder->getCurrentUrl();
+    }
+
+    /**
      * Get customer data for Chatwoot
      *
      * @return array
      */
     public function getCustomerData()
     {
-        $data = [];
+        $data = [
+            'custom_attributes' => [
+                'current_page' => $this->getCurrentUrl()
+            ]
+        ];
+
         if ($this->customerSession->isLoggedIn()) {
             $customer = $this->customerSession->getCustomer();
-            $data = [
+            $data = array_merge($data, [
                 'name' => $customer->getName(),
                 'email' => $customer->getEmail(),
                 'identifier' => $customer->getId()
-            ];
+            ]);
         }
         return $data;
     }
