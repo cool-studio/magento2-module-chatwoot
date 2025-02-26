@@ -11,6 +11,8 @@ This module integrates the Chatwoot customer messaging platform with Magento 2, 
 - ✅ Customizable widget position (left/right)
 - ✅ Multiple widget display types (standard/expanded)
 - ✅ Custom launcher title support
+- ✅ Dark mode support with auto/light options
+- ✅ Real-time page tracking for better context
 - ✅ Automatic customer information sync when logged in
 - ✅ Full configuration through Magento admin
 
@@ -59,6 +61,7 @@ bin/magento cache:flush
 | Widget Position | Position of the widget (left/right) |
 | Widget Type | Standard or Expanded bubble display |
 | Launcher Title | Custom text for the chat widget when closed |
+| Dark Mode | Choose between auto (system preference) or light mode |
 
 ## Setting up HMAC Identity Validation
 
@@ -69,6 +72,18 @@ For enhanced security, you can enable HMAC validation:
 3. Copy this key to the Magento admin configuration
 
 HMAC validation ensures that user identities are authentic and cannot be spoofed.
+
+## Features in Detail
+
+### Dark Mode
+The widget can adapt to your users' preferences:
+- `auto`: Automatically matches the user's system theme
+- `light`: Forces light mode regardless of system settings
+
+### Page Tracking
+Support agents can see which page a customer is currently viewing, helping provide more contextual assistance. This works for both:
+- Logged-in customers
+- Guest visitors
 
 ## Support
 
