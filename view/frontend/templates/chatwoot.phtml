@@ -15,6 +15,7 @@ $websiteToken = $block->getWebsiteToken();
 $position = $block->getPosition();
 $widgetType = $block->getWidgetType();
 $launcherTitle = $block->getLauncherTitle();
+$darkMode = $block->getDarkMode();
 $customerData = $block->getCustomerDataJson();
 ?>
 
@@ -24,6 +25,7 @@ $customerData = $block->getCustomerDataJson();
         <?php if ($position): ?>position: "<?= $block->escapeJs($position) ?>",<?php endif; ?>
         <?php if ($widgetType): ?>type: "<?= $block->escapeJs($widgetType) ?>",<?php endif; ?>
         <?php if ($launcherTitle): ?>launcherTitle: "<?= $block->escapeJs($launcherTitle) ?>",<?php endif; ?>
+        darkMode: "<?= $block->escapeJs($darkMode) ?>",
         hideMessageBubble: false
     };
 

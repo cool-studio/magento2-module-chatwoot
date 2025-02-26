@@ -112,6 +112,16 @@ class Chatwoot extends Template
     }
 
     /**
+     * Get dark mode setting
+     *
+     * @return string
+     */
+    public function getDarkMode()
+    {
+        return $this->helper->getDarkMode();
+    }
+
+    /**
      * Get customer data with HMAC signature for Chatwoot
      *
      * @return array

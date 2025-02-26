@@ -57,6 +57,14 @@
                         <field id="enabled">1</field>
                     </depends>
                 </field>
+                <field id="dark_mode" translate="label" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Dark Mode</label>
+                    <source_model>CoolStudio\Chatwoot\Model\Config\Source\DarkMode</source_model>
+                    <comment>Choose between light and dark mode for the widget</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
             </group>
         </section>
     </system>

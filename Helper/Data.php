@@ -25,6 +25,7 @@ class Data extends AbstractHelper
     const XML_PATH_POSITION = 'chatwoot/general/position';
     const XML_PATH_WIDGET_TYPE = 'chatwoot/general/widget_type';
     const XML_PATH_LAUNCHER_TITLE = 'chatwoot/general/launcher_title';
+    const XML_PATH_DARK_MODE = 'chatwoot/general/dark_mode';
 
     /**
      * @var CustomerSession
@@ -160,6 +161,21 @@ class Data extends AbstractHelper
             ScopeInterface::SCOPE_STORE,
             $storeId
         );
+    }
+
+    /**
+     * Get dark mode setting
+     *
+     * @param null|string|int $storeId
+     * @return string
+     */
+    public function getDarkMode($storeId = null)
+    {
+        return $this->scopeConfig->getValue(
+            self::XML_PATH_DARK_MODE,
+            ScopeInterface::SCOPE_STORE,
+            $storeId
+        ) ?: 'auto';
     }
 
     /**
