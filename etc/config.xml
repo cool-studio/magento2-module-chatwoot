@@ -4,10 +4,13 @@
         <chatwoot>
             <general>
                 <enabled>0</enabled>
+                <website_token></website_token>
                 <base_url>https://app.chatwoot.com</base_url>
+                <hmac_secret></hmac_secret>
                 <position>right</position>
                 <widget_type>standard</widget_type>
                 <launcher_title>Chat with us</launcher_title>
+                <dark_mode>auto</dark_mode>
             </general>
         </chatwoot>
     </default>
